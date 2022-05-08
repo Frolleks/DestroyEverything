@@ -1,6 +1,6 @@
-import RikkaPlugin from '@rikka/Common/entities/Plugin';
+import RikkaPlugin from "@rikka/Common/entities/Plugin";
 import { exec } from "child_process";
-import manifest from './manifest.json';
+import manifest from "./manifest.json";
 
 export default class DestroyEverything extends RikkaPlugin {
    inject() {
